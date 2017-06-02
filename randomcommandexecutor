@@ -1,0 +1,5 @@
+#!/bin/sh
+title="Random Command Executor"
+command=$(zenity --entry --title="$title" --text "Yo, what you wanna do?")
+zenity --info --title="$title" --text="$( $command)"
+exit

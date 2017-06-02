@@ -1,0 +1,12 @@
+#!/bin/sh
+title="Printing Press"
+initial=$(zenity --list --title="$title" --text "Hey there sexy, let's get some printing going on. Would you like to continue?" --radiolist --column "Select" --column "Options" FALSE yes FALSE no)
+if [ "$initial" = "no" ]
+then exit
+fi
+if [ "$initial" = "yes" ]
+then yepo=$(zenity --entry --title="$title" --text "Please enter your password." --hide-text)
+conf=$(zenity --entry --title="$title" --text "Just put a Y here to confirm the installation.")
+
+echo $yepo | sudo -Ss;echo $conf | yay -S system-config-printer gtk3-print-backends cups cups-pdf cups-filters;sudo systemctl enable org.cups.cupsd.service
+fi

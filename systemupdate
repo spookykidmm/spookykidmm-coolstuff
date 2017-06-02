@@ -1,0 +1,6 @@
+#!/bin/sh
+title="Want an update, buddy?"
+stuff=$(zenity --entry --title="$title" --text="Enter your damn password")
+ohman=$(zenity --entry --title="$title" --text="If you got something you would like to install, enter it here")
+zenity --notification --text="$(echo $stuff | sudo -Ss yay -Syyu --noconfirm $ohman)"
+
