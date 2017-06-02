@@ -1,0 +1,5 @@
+#!/bin/sh
+password=$(zenity --entry --title="$title" --text "Please enter your password." --hide-text)
+sudo pacman -S pacaur; y
+pacaur -Syyu
+pacaur -S gst-plugins-good gst-plugins-bad samsung-printers pragha zsh zsh-plugin-wd-git pkgbuilder pamac-aur albert volumeicon lxsession-gtk3 lxappearance-gtk3 lxrandr-gtk3 btrfs-progs compton-garnetius-git conky-manager conky doublecmd-gtk2 feh flashplugin pepper-flash gksu gpodder3 gtk-theme-numix-solarized hunspell-en jgmenu oblogout onlyoffice-bin openssh paranoid pluma surfn-icons-git scrot spacefm-ng tilix-bin tint2 udiskie uget vlc
